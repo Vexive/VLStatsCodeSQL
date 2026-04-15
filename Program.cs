@@ -20,14 +20,13 @@ namespace VLStatsCodeSQL
                     "Строка подключения 'VlStats' не найдена.");
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.WriteLine("=== VLSTATS CRUD Утилита ===");
+            Console.WriteLine("VLSTATS CRUD Утилита");
             Console.WriteLine(
                 $"Подключение: {s_connectionString}");
             Console.WriteLine();
 
             while (true)
             {
-                Console.WriteLine("--- Главное меню ---");
                 Console.WriteLine("1. ADO.NET");
                 Console.WriteLine("2. Entity Framework");
                 Console.WriteLine("0. Выход");
@@ -44,7 +43,6 @@ namespace VLStatsCodeSQL
                         ShowTableMenu(useEf: true);
                         break;
                     case "0":
-                        Console.WriteLine("До свидания!");
                         return;
                     default:
                         Console.WriteLine("Неверный выбор.");
